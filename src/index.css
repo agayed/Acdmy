@@ -1,0 +1,223 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  margin: 10px 0;
+  color: #fff;
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,0.6) 60%, rgba(252,176,69,1) 100%),
+  radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 28%);
+  padding: 20px;
+  width: 100%;
+  background-origin: padding-box, content-box;
+  background-repeat: no-repeat;
+
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.Carousel_h3{
+  color: rgb(241, 241, 250);
+  margin-top: -600px;
+  font-size: 70px;
+}
+
+.Carousel_p{
+  color: rgb(255, 8, 0);
+  margin-top: 50px;
+  font-size: 50px;
+
+}
+
+ul li{
+  font-size: 20px;
+  color: blue;
+}
+h4{
+  font-size: 20px;
+  color: rgb(255, 0, 0);
+}
+p{
+  font-size: 20px;
+  color: rgb(136, 255, 0);
+}
+img{
+  width: 75%;
+  height: 75%;
+}
+.bac{
+ /* background-color: blue; */
+  background-image: "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AAMRUC4.img?h=416&w=799&m=6&q=60&u=t&o=f&l=f";
+}
+
+.box {
+	text-align: center;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+	position: relative;
+}
+.box img {
+	width: 100%;
+	height: auto;
+	transition: all 0.5s ease 0s;
+}
+.box:hover img {
+	transform: scale(1.2);
+	filter: grayscale(100%);
+}
+.box .box-content {
+	width: 95%;
+	height: 95%;
+	background: rgba(0, 0, 0, 0.8);
+	padding: 5% 0;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+.box:hover .box-content {
+	opacity: 1;
+}
+.box .title {
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: #fff;
+	letter-spacing: 1px;
+	text-transform: capitalize;
+	margin: 0 0 10px;
+}
+.box .post {
+	display: block;
+	font-size: 0.7rem;
+	color: #daa520;
+	text-transform: uppercase;
+	margin-bottom: 4%;
+}
+.box .post:hover {
+	color: #23384e;
+}
+.box .icon {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.box .icon li {
+	display: inline-block;
+	text-align: center;
+}
+.box .icon li a {
+	display: block;
+	padding: 2%;
+	font-size: 0.6rem;
+	color: #fff;
+	position: relative;
+	/* transform: rotate(-45deg); */
+	transition: all 0.4s ease-in-out;
+}
+.box .icon li a:hover {
+	background: #d9d9d9;
+}
+.box .icon li a span {
+	display: block;
+}
+.box .icon li a span i {
+	transform: rotate(45deg);
+}
+.box .icon li a:before,
+.box .icon li a:after,
+.box .icon li a span:before,
+.box .icon li a span:after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	background: rgb(6, 152, 250);
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all 0.4s ease-in-out 0s;
+}
+.box .icon li a span:before {
+	left: auto;
+	right: 0;
+}
+.box .icon li a span:after {
+	top: auto;
+	bottom: 0;
+}
+.box .icon li:nth-child(2) a:before,
+.box .icon li:nth-child(2) a:after,
+.box .icon li:nth-child(2) a span:before,
+.box .icon li:nth-child(2) a span:after {
+	transition-delay: 0.2s;
+}
+.box:hover .icon li a:before,
+.box:hover .icon li a span:before {
+	width: 3px;
+	height: 100%;
+}
+.box:hover .icon li a:after,
+.box:hover .icon li a span:after {
+	width: 100%;
+	height: 3px;
+}
+@media only screen and (max-width: 990px) {
+	.box {
+		margin-bottom: 30px;
+	}
+}
+
+.MuiAppBar-colorPrimary1 {
+    color: #fff;
+
+}
+
+.box {
+	margin: 10px 0;
+	color: #fff;
+	background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,0.6) 60%, rgba(252,176,69,1) 100%),
+	radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 28%);
+	padding: 20px;
+	width: 100%;
+	background-origin: padding-box, content-box;
+	background-repeat: no-repeat;
+  }
+
+  .M{
+	  padding-top: 3%;
+  }
+  .boxf1{
+	  color: cornsilk;
+	  font-size: 20px;
+  }
+  .boxf2{
+	color: rgb(1, 235, 252);
+	font-size: 20px;
+
+  }
+  .boxf3{
+	  margin-bottom: 100px;
+	  padding-bottom: 100%;
+  }
+  /* ._time_link{
+	color: #fff;
+	background-origin: padding-box, content-box;
+	background-repeat: no-repeat;
+	  font-size: 15px;
+	  margin-left: 20px;
+  } */
+   .main_time{
+	font-size:23px;
+	padding-left: 10px;
+  } 

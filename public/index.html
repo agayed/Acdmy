@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.woff2" />
+ 
+ 
+  
+<style>
+
+
+
+    .timediv {
+    font-size:16px;
+     font-family: 'Droid Arabic Kufi', sans-serif, Arial;-ms-text-size-adjust:100%;
+        text-align: center;
+        direction: rtl;
+        width: 100%;
+        right: 100%;
+        margin: 0px;
+        padding: 0px;
+        padding-top: 0px;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+    .style{background:#F2F2F2;}
+    @font-face {
+        font-family: 'Droid Arabic Kufi';
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.eot);
+        src: url(https://fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.eot?#iefix) format('embedded-opentype'),
+             url(https://fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.woff2) format('woff2'),
+             url(https://fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.woff) format('woff'),
+             url(https://fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.ttf) format('truetype');
+    }
+    </style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+    
+    
+    function skipMobileSite(){document.cookie='occSkipMobile=true; path=/';}
+    function allowMobileSite(){document.cookie='occSkipMobile=true; expires=Fri, 3 Aug 2001 20:47:11 UTC; path=/';}
+    function updateLg(lgcode){document.cookie='deflang='+ lgcode+';expires=Tue, 3 Aug 2060 20:47:11 UTC;path=/;domain=now-time.com';}
+    function getSubDomain(){var str=window.location.host;var arrValue=str.split(".");var result=arrValue[0];return result;}
+    (function($){function formatTime(time){var parts=time.split(':');var period='صباحاً';if(parts[0]>=12){period='مساءً';parts[0]=parts[0]- 12;}
+    if(parts[0]=='00'){parts[0]=12;}
+    parts[0]=parseFloat(parts[0]).toFixed(0);time=parts.join(':');time=time+' '+ period;return time;}
+    $(document).ready(function(){if(typeof timezones!='undefined'){var $main_time=$('#main_time');var $main_date=$('#main_date');var main_tz=$main_time.attr('data-tz');var bookmark_times=[];$.each($('.bookmark_time'),function(){bookmark_times.push(this);});function syncTime(){var curr_time=current_time[main_tz];var h=parseInt(curr_time[0],10),m=parseInt(curr_time[1],10),s=parseInt(curr_time[2],10);if(getSubDomain()=='www'){var w=curr_time[3],mo=curr_time[4],n=curr_time[5],y=curr_time[6];if(getSubDomain()=='www'||getSubDomain()=='ca'){var date=w+', '+mo+' '+n+', '+y;}else{var date=w+', '+n+' '+mo+' '+y;}
+    $main_date.html(date);}
+    $.ajax({url:'https://www.now-time.com/sync.php',type:'POST',data:{tz:timezones.join(',')},dataType:'json',success:function(data){$.each(data,function(k,v){current_time[k]=v.split(',');});var curr_time=current_time[main_tz];if(h=='00'&&m=='00'&&s<='20'){var w=curr_time[3],mo=curr_time[4],n=curr_time[5],y=curr_time[6];var date=w+', '+n+' '+mo+' '+y;$main_date.html(date);}}});}
+    syncTime();setInterval(syncTime,15000);$.each(bookmark_times,function(){var $this=$(this);var tz=$this.attr('data-tz');var curr_time=current_time[tz];var h=parseInt(curr_time[0],10),m=parseInt(curr_time[1],10);h=h<10?'0'+ h:h;m=m<10?'0'+ m:m;var time=h+':'+ m;if(time_format=='12')time=formatTime(time);$this.html(time);});var ftime=1;function updateBookmarks(skip){$.each(current_time,function(tz,curr_time){if(tz!=main_tz&&ftime){var h=parseInt(curr_time[0],10),m=parseInt(curr_time[1],10);m=m+ 1;if(m>59){m=0;h=h+ 1;if(h>23){h=0;}}
+    current_time[tz][0]=h;current_time[tz][1]=m;}});$.each(bookmark_times,function(){var $this=$(this);var tz=$this.attr('data-tz');var curr_time=current_time[tz];var h=parseInt(curr_time[0],10),m=parseInt(curr_time[1],10);h=h<10?'0'+ h:h;m=m<10?'0'+ m:m;var time=h+':'+ m;if(time_format=='12')time=formatTime(time);$this.html(time);});ftime=1;}
+    function updateTime(){var curr_time=current_time[main_tz];var h=parseInt(curr_time[0],10),m=parseInt(curr_time[1],10),s=parseInt(curr_time[2],10);s=s+ 1;if(s>59){s=0;m=m+ 1;setTimeout(updateBookmarks);if(m>59){m=0;h=h+ 1;if(h>23){h=0;syncTime();}}}
+    current_time[main_tz][0]=h;current_time[main_tz][1]=m;current_time[main_tz][2]=s;h=h<10?'0'+ h:h;m=m<10?'0'+ m:m;s=s<10?'0'+ s:s;var time=h+':'+ m+':'+ s;if(time_format=='12')time=formatTime(time);$main_time.html(time);}
+    updateTime();setInterval(updateTime,1000);}
+    var up_num=0;var down_num=0;var old_value='';$('#search').keyup(function(e){if(e.keyCode==38||e.keyCode==40)return;$(document).unbind('keydown');var val=this.value;if(val==''||val==old_value||val.length<2)return;old_value=val;$.ajax({url:'http://'+getSubDomain()+'.now-time.com/suggest.php',data:{location:val},dataType:'json',success:function(result){var $suggest_box=$('#suggest_box');if($suggest_box.length){$suggest_box.remove();}
+    $suggest_box=$('<ul id="suggest_box"></ul>');var lists="";$.each(result,function(){if(getSubDomain()=='www'){if(this[2]!='United States'||this[0]=='Washington DC'){lists+=('<li onclick="document.location=\'http://'+ server_name+'/'+ encodeURI((this[2]?this[2].replace(/ /g,'_')+'/':'').toLowerCase()+ this[0].replace(/ /g,'_').toLowerCase()).replace(/\'/g,"\\\'")+'\'"><div class="location">'+this[0]+(this[2]?', '+ this[2]:'')+'</div></div>');}else{lists+=('<li onclick="document.location=\'http://'+ server_name+'/'+ encodeURI((this[2]?this[2].replace(/ /g,'_')+'/':'').toLowerCase()+this[0].replace(/ /g,'_').toLowerCase()).replace(/\'/g,"\\\'")+'\'"><div class="location">'+ this[4]+', '+ this[3]+(this[4]?', '+ this[2]:'')+'</div></div>');}}else{var tt2=this[2];if(tt2){var tableau2=this[2].split('$##$');if(tableau2[1]!==undefined)tt2=tableau2[0];}
+    var tt0=this[0];var tableau0=this[0].split('$##$');if(tableau0[1]!==undefined)tt0=tableau0[0];if(tt2!='United States'||tt0=='Washington DC'){var tt0=this[0];var tableau0=this[0].split('$##$');if(tableau0[1]!==undefined)tt0=tableau0[1];var tt2=this[2];if(tt2){var tableau2=this[2].split('$##$');if(tableau2[1]!==undefined)tt2=tableau2[1];}
+    var url0=this[0];var tableauURL0=this[0].split('$##$');if(tableauURL0[0]!==undefined)url0=tableauURL0[0];var url2=this[2];if(url2){var tableauURL2=this[2].split('$##$');if(tableauURL2[0]!==undefined)url2=tableauURL2[0];}
+    lists+=('<li onclick="document.location=\'http://'+ server_name+'/'+ encodeURI((url2?url2.replace(/ /g,'_')+'/':'').toLowerCase()+ url0.replace(/ /g,'_').toLowerCase()).replace(/\'/g,"\\\'")+'\'"><div class="location">'+tt0+(tt2?', '+ tt2:'')+'</div></div>');}else{var tt4=this[4];if(tt4){var tableau4=this[4].split('$##$');if(tableau4[1]!==undefined)tt4=tableau4[1];}
+    var tt3=this[3];if(tt3){var tableau3=this[3].split('$##$');if(tableau3[1]!==undefined)tt3=tableau3[1];}
+    var tt2=this[2];if(tt2){var tableau2=this[2].split('$##$');if(tableau2[1]!==undefined)tt2=tableau2[1];}
+    var url0=this[0];var tableauURL0=this[0].split('$##$');if(tableauURL0[0]!==undefined)url0=tableauURL0[0];var url2=this[2];if(url2){var tableauURL2=this[2].split('$##$');if(tableauURL2[0]!==undefined)url2=tableauURL2[0];}
+    lists+=('<li onclick="document.location=\'http://'+ server_name+'/'+ encodeURI((url2?url2.replace(/ /g,'_')+'/':'').toLowerCase()+url0.replace(/ /g,'_').toLowerCase()).replace(/\'/g,"\\\'")+'\'"><div class="location">'+ tt4+', '+ tt3+(tt4?', '+ tt2:'')+'</div></div>');}}});$suggest_box.html(lists);$suggest_box.appendTo('.fixed-wraper');var $curr_li=null;$(document).keydown(function(e){if(e.keyCode==13){var r=$curr_li.find('.location').text().split(',');if($.trim(r[1])==''){var selected=$.trim(r[1])+'/'+$.trim(r[0]);}else{var selected=$.trim(r[2])+'/'+$.trim(r[1])+'/'+$.trim(r[0]);}
+    selected=selected.replace(/^\//,'').replace(/\/$/,'').replace(/ /g,'_');document.location='http://'+ server_name+'/'+selected.toLowerCase();return false;}else if(e.keyCode==38){var $lis=$('#suggest_box li');if(!$curr_li){$curr_li=$($lis[0]);}else{$curr_li.removeClass('selected');$prev=$curr_li.prev();if($prev.length){$curr_li=$prev;}}
+    $curr_li.addClass('selected');}else if(e.keyCode==40){var $lis=$('#suggest_box li');if(!$curr_li){$curr_li=$($lis[0]);}else{$curr_li.removeClass('selected');$next=$curr_li.next();if($next.length){$curr_li=$next;}}
+    $curr_li.addClass('selected');}else{var $suggest_box=$('#suggest_box');if($suggest_box.length)$suggest_box.remove();}});$(document).click(function(){var $suggest_box=$('#suggest_box');if($suggest_box)$suggest_box.remove();$(document).unbind('click');$(document).unbind('keydown');});}});});$('#search').focus(function(){var val=this.value;if(val==''||val==old_value||val.length<2)return;old_value=val;$.ajax({url:'http://'+getSubDomain()+'.now-time.com/suggest.php',data:{location:val},dataType:'json',success:function(result){var $suggest_box=$('#suggest_box');if($suggest_box.length){$suggest_box.remove();}
+    $suggest_box=$('<ul id="suggest_box"></ul>');var lists="";lists+=('<li>Did You Mean..........</li>');$.each(result,function(){if(this[2]!='United States'){lists+=('<li onclick="document.location=\'http://'+ server_name+'/'+ encodeURI((this[2]?this[2].replace(/ /g,'_')+'/':'').toLowerCase()+ this[0].replace(/ /g,'_').toLowerCase()).replace(/\'/g,"\\\'")+'\'"><div class="location">'+this[0]+(this[2]?', '+ this[2]:'')+'</div><div class="time">'+((time_format=='12')?formatTime(this[1]):this[1])+'</div></div>');}else{lists+=('<li onclick="document.location=\'http://'+ server_name+'/'+ encodeURI((this[2]?this[2].replace(/ /g,'_')+'/':'').toLowerCase()+this[0].replace(/ /g,'_').toLowerCase()).replace(/\'/g,"\\\'")+'\'"><div class="location">'+ this[4]+', '+ this[3]+(this[4]?', '+ this[2]:'')+'</div><div class="time">'+((time_format=='12')?formatTime(this[1]):this[1])+'</div></div>');}});$suggest_box.html(lists);$suggest_box.css({left:$('#search').position().left,top:$('#search').position().top+ $('#search').outerHeight(),width:$('#search').outerWidth()});$suggest_box.appendTo('body');var $curr_li=null;$(document).keydown(function(e){if(e.keyCode==13){var r=$curr_li.find('.location').text().split(',');if($.trim(r[1])==''){var selected=$.trim(r[1])+'/'+$.trim(r[0]);}else{var selected=$.trim(r[2])+'/'+$.trim(r[1])+'/'+$.trim(r[0]);}
+    selected=selected.replace(/^\//,'').replace(/\/$/,'').replace(/ /g,'_');document.location='http://'+ server_name+'/'+selected.toLowerCase();return false;}else if(e.keyCode==38){var $lis=$('#suggest_box li');if(!$curr_li){$curr_li=$($lis[0]);}else{$curr_li.removeClass('selected');$prev=$curr_li.prev();if($prev.length){$curr_li=$prev;}}
+    $curr_li.addClass('selected');}else if(e.keyCode==40){var $lis=$('#suggest_box li');if(!$curr_li){$curr_li=$($lis[0]);}else{$curr_li.removeClass('selected');$next=$curr_li.next();if($next.length){$curr_li=$next;}}
+    $curr_li.addClass('selected');}else{var $suggest_box=$('#suggest_box');if($suggest_box.length)$suggest_box.remove();}});$(document).click(function(){var $suggest_box=$('#suggest_box');if($suggest_box)$suggest_box.remove();$(document).unbind('click');$(document).unbind('keydown');});}});});$('#bookmarks li').hover(function(){$(this).find('.bookmark_actions').css('display','block');},function(){$(this).find('.bookmark_actions').css('display','none');});});})(jQuery);function changeNickname(){var new_nickname=prompt('Type in a new nickname:',nickname);if(new_nickname){document.location='http://'+server_name+'/bookmark/'+user_name+'?method=name&location='+$location+'&nickname='+nickname+'&new_nickname='+escape((new_nickname?new_nickname.replace(/ /g,'_')+'/':''));}
+    return false;}
+    function setsrh(val){var srhtxt=val;var msg=document.getElementById('search');msg.value=srhtxt;setTimeout(function(){msg.focus();},1000);}
+    
+    </script>
+    <script>
+    var server_name = "www.now-time.com";
+    var time_format = '1';
+    
+    var timezones = ["","Etc/GMT+5","Etc/GMT+4","Etc/GMT+6","Etc/GMT+5","Etc/GMT+8","Etc/GMT+7","GMT","UTC"];
+    
+    
+    var current_time = {"":["19","17","10","Thursday"]};
+    
+    </script>
+   
+ 
+ 
+ 
+ 
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+  <title>الموقع التعليمى العربي</title>
+
+  <script language="JavaScript">
+    function changeBGC(color) {
+      switch (color) {
+        case "blue":
+          document.bgColor = "blue";
+          break;
+        case "pink":
+          document.bgColor = "#FCC";
+          break;
+        case "white":
+          document.bgColor = "#FFF";
+          break;
+        case "yellow":
+          document.bgColor = "#FF9";
+          break;
+        case "green":
+          document.bgColor = "#0F9";
+          break;
+          defult:
+          document.bgColor = "#FCC";
+          break;
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script src="https://www.now-time.com/widget/citywidget24.php?id=1"></script>
+  <script>_time.start(["thetimenow"]);</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+</body>
+
+</html>

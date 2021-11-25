@@ -1,0 +1,182 @@
+{
+  "Header": {
+    "title": "أنت فى المكان الصحيح",
+    "paragraph": "تريد أن تكون مبدعاً في هذه الحياة أول خطوة.. أحتك بالناجحين وأستمع لأفكارهم وحاورهم.. هذه أول خطوة للنجاح."
+  },
+  "About": {
+    "paragraph": "نحن فريق تعليمى على مستوى الوطن العربى نهتم بكل جديد فى مجالات المعرفة ،وندعم كل الأفكارة الجديدة ونشجعها،ولازال الطريق أمامنا طويلا ",
+    "Why": [
+      "دعم الأفكار فى كل المجالات",
+      "توفير المعلومات الجديدة والمميزة",
+      "سهولة التعلم",
+      "توفر بيئة تعليمية لكل الأعمار",
+      "شرح وافى لكل جزئية مع الأمثلة",
+      "ملفات تطبيقية وعملية",
+      "فريق دعم على أعلى مستوى من العلم والتفكير",
+      "توفير المحتوى بلغتنا العربية"
+    ]
+  },
+  "Gallery": [
+    {
+      "title": "كورس تعليمى كامل عن تصميم المواقع",
+      "largeImage": "img/portfolio/001-large.jpg",
+      "smallImage": "img/portfolio/001-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/02-large.jpg",
+      "smallImage": "img/portfolio/02-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/03-large.jpg",
+      "smallImage": "img/portfolio/03-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/04-large.jpg",
+      "smallImage": "img/portfolio/04-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/05-large.jpg",
+      "smallImage": "img/portfolio/05-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/06-large.jpg",
+      "smallImage": "img/portfolio/06-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/07-large.jpg",
+      "smallImage": "img/portfolio/07-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/08-large.jpg",
+      "smallImage": "img/portfolio/08-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/09-large.jpg",
+      "smallImage": "img/portfolio/09-small.jpg"
+    }
+  ],
+  "Services": [
+    {
+      "icon": "fa fa-wordpress",
+      "name": "برمجة وتطوير المواقع",
+      "text": "توجد كورسات فى برمجة الويب تجعلك الأول فى المجال ، وهذه الكورسات تؤهلك للحصول على دخل معيشى مناسب ، ويناسب كل الأعمار سواء كنت طفلا أو فى مرحلة التعليم الجامعى أو حتى تعمل فى أى مجال آخر"
+    },
+    {
+      "icon": "fa fa-cart-arrow-down",
+      "name": "التسويق الإلكترونى",
+      "text": "من المؤكد أننا فى مرحلة التحول الى عالم التسويق الإلكترونى والذى أثبت وبكل جدارة تمكنه على المستوى العالمى ـ ولهذا أنشأنا قسما لتعليم التسويق الإلكترونى وتوفير كل الوسائل المتاحة لكى تجد وظيفة المستقبل"
+    },
+    {
+      "icon": "fa fa-cloud-download",
+      "name": "مصادر المعرفة",
+      "text": "لقد قمنا بإنشاء هذا القسم لكى نوفر لك كل مصادر المعرفة سواء المقرؤة أو المسموعة أو المرئية وأيضا ملفات مشروحة يمكنك تحميلها أو قرأتها فى أى وقت ،مع تصنيف معرفى متميز لكل فروع المعرفة "
+    },
+    {
+      "icon": "fa fa-language",
+      "name": "التعليم عن بعد",
+      "text": "يوجد لدينا كورسات تعليمية أونلاين من خلال مجموعة من الأساتذة المتخصصين فى المجالات المعرفية المختلفة عن طريق برامج التواصل عن بعد"
+    },
+    {
+      "icon": "fa fa-plane",
+      "name": "التعرف على طلبة حول العالم",
+      "text": "معنا سوف تتعرف على طلبة يدرسون فى المجالات المعرفية المختلفةويتحدثون بلغات ملختفة للتواصل ومعرفة كيف يفكر العالم فى كل مجال والتعرف على الثقافات  لكل مجتمع"
+    },
+    {
+      "icon": "fa fa-pie-chart",
+      "name": "تحليل البيانات والذكاء الصناعى",
+      "text": "لغة العصر الجديد والذى ستجعل العالم أسرع فى الأداء التكنولوجى وستكون وظيفة المستقبل الأولي والتى لن يستغنى عنها العالم فى كل المجالات الحياتية المختلفة"
+    }
+  ],
+  "Testimonials": [
+    {
+      "img": "img/testimonials/01.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "John Doe"
+    },
+    {
+      "img": "img/testimonials/02.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "Johnathan Doe"
+    },
+    {
+      "img": "img/testimonials/03.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "John Doe"
+    },
+    {
+      "img": "img/testimonials/04.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "Johnathan Doe"
+    },
+    {
+      "img": "img/testimonials/05.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "John Doe"
+    },
+    {
+      "img": "img/testimonials/06.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "Johnathan Doe"
+    }
+  ],
+  "Team": [
+    {
+      "img": "img/team/01.jpg",
+      "name": "John Doe",
+      "job": "Director"
+    },
+    {
+      "img": "img/team/02.jpg",
+      "name": "Mike Doe",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/03.jpg",
+      "name": "Jane Doe",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/04.jpg",
+      "name": "Karen Doe",
+      "job": "Project Manager"
+    }
+  ],
+  "Contact": {
+    "address": "4321 California St, San Francisco, CA 12345 ",
+    "phone": "+1 123 456 1234",
+    "email": "info@company.com",
+    "facebook": "fb.com",
+    "twitter": "twitter.com",
+    "youtube": "youtube.com"
+  },
+  "Features": [
+    {
+      "icon": "fa fa-language",
+      "title": "مراسلتنا",
+      "text": "يمكنك مراسلتنا فى أى وقت ومن أى مكان فى العالم ، وهذا أهم مايميزنا"
+    },
+    {
+      "icon": "fa fa-bullhorn",
+      "title": "الكورسات التعليمية",
+      "text": "يوجد لدينا أفضل الكورسات التعليمية والمحدثة بشكل مستمر وفقا للمحتوى العالمى "
+    },
+    {
+      "icon": "fa fa-group",
+      "title": "طلابنا",
+      "text": "يتمتع طلابنا بمحتوى الموقع والذى يحقق طموحاتهم ورغابتهم ويحفزهم على التعلم بشكل مستمر"
+    },
+    {
+      "icon": "fa fa-magic",
+      "title": "الوسائل التعليمية",
+      "text": "تتنوع الوسائل التعليمية فى الموقع بما يتيح لكل طالب المتابعة حسب الوسيلة التى يرغبها دون فرض وسائل معينة تعمل على إعاقة عملية التعلم"
+    }
+  ]
+}

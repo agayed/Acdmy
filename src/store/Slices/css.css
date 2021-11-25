@@ -1,0 +1,226 @@
+.heading1cont {
+    color: #ffffff;
+    background-color: #000000;
+    margin: 2% 15%;
+    padding: 1%;
+    text-align: center;
+    font-family: "Almarai Regular", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 10%;
+}
+
+.word {
+    padding: 0 2
+px
+;
+    direction: ltr;
+    display: inline-block;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    color: darkred;
+}
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.embed-responsive {
+    border: black 5px
+ solid;
+}
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 400px;
+    height: 400px;
+    padding: 0;
+    overflow: hidden;
+   margin: auto; 
+}
+
+.embed-responsive-item, .embed-responsive embed, .embed-responsive iframe, .embed-responsive object, .embed-responsive video {
+    /* position: absolute; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.svg-inline--fa {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+}
+
+
+
+
+
+.nextprev a {
+    font-size: 0.75rem;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8
+px
+ 16
+px
+;
+}
+.prvnxtButton {
+    background-color: #23384e;
+    border-radius: 10%;
+}
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+user agent stylesheet
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.nextprev {
+    margin: 0.3
+rem
+;
+    color: white;
+}
+.nextprev a {
+    font-size: 0.75rem;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+.prvnxtButton {
+    background-color: #23384e;
+    border-radius: 10%;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.nextprev a:hover {
+	background-color: #ddd;
+	color: black;
+}
+.tip {
+    background-color: #a8cad6;
+    padding: 20px
+;
+    font-family: "Lalezar Regular", cursive;
+    font-size: 0.8rem;
+    width: 70%;
+    margin: 2% auto;
+    box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+svg:not(:root).svg-inline--fa {
+    overflow: visible;
+}
+
+.svg-inline--fa.fa-w-14 {
+    width: 0.875
+em
+;
+}
+
+.svg-inline--fa {
+    display: inline-block;
+    font-size: inherit;
+    height: 1
+em
+;
+    overflow: visible;
+    vertical-align: -0.125
+em
+;
+}
+svg {
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.tip p, .note p, .note ul {
+    padding-right: 5%;
+    font-family: "Lalezar Regular", cursive;
+    font-size: 0.8rem;
+}
+p {
+    font-family: "Almarai Regular", sans-serif;
+    font-weight: 300;
+    color: #00091a;
+    text-align: right;
+    padding: 0 2%;
+    font-size: 0.75rem;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem
+;
+}
+
+.card-text:last-child {
+    margin-bottom: 0;
+}
+.card-text {
+    color: #ffffff;
+    margin-left: 15px;
+    padding-left: 5%;
+}
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.card-body {
+    direction: ltr;
+    text-align: left;
+    background-color: #282923;
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    height: 100%;
+}
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}
+
+.card-text li {
+    border-left: green 5px
+ solid;
+    padding-left: 10px;
+    font-family: Consolas;
+}
+
+.box .post {
+    display: block;
+    font-size: 0.7rem;
+    color: #daa520;
+    text-transform: uppercase;
+    margin-bottom: 4%;
+}
