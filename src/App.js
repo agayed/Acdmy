@@ -36,6 +36,7 @@ import Goal2 from './store/Slices/goal2';
 import Goal1 from './store/Slices/goal';
 // import Fades from './pages/Fade';
 import Edit from './pages/Edit';
+Import {HashRouter as Router} from 'react-router-dom'
 function App() {
 const [landingPageData, setLandingPageData] = useState({});
 useEffect(() => {
